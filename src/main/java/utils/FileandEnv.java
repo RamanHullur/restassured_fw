@@ -5,13 +5,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+
 public class FileandEnv {
 	
 	public static Map<String, String> fileandenv = new HashMap<String, String>();
 	public static Properties propMain = new Properties();
 	public static Properties propPreSet = new Properties();
 	
-	
+	/***
+	 *
+	 * Consuming the user properties or data from Property files
+	 * @author Raman
+	 * @return fileandenv
+	 * 
+	 * */
 	public static Map<String, String> envAndFile(){
 		
 		String environment = System.getProperty("env");
@@ -55,7 +62,13 @@ public class FileandEnv {
 	}
 	
 	
-	
+	/***
+	 *
+	 * Returning config reader map object for different environments selection method
+	 * @author Raman
+	 * @return fileandenv
+	 * 
+	 * */
 	public static Map<String, String> getConfigReader(){
 		if(fileandenv == null) {
 			fileandenv = envAndFile();
